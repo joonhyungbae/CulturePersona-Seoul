@@ -1,0 +1,20 @@
+CulturePersona-Seoul
+Copyright (c) 2026 The CulturePersona-Seoul authors
+
+Data: the grounding tables, sampler specifications, open-item theme tables and codebook, and the synthetic
+personas with their narratives are released under the Creative Commons Attribution-NonCommercial 4.0
+International licence (CC BY-NC 4.0): https://creativecommons.org/licenses/by-nc/4.0/
+
+Code and evaluation layer: the code (src/, scripts/, tests/, preprocessing/, annotation/, paper/) and the
+evaluation layer (held-out item registry, SSR reference statements, model answers, PPI and score tables,
+model-judge runs, audit guideline and aggregate audit results) are released under the Creative Commons
+Attribution 4.0 International licence (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+Persona records and table values that appear inside the evaluation layer remain under CC BY-NC 4.0.
+
+Source data: Seoul Citizens' Cultural Participation Survey, 2020, 2022 and 2024 waves (Seoul Foundation for
+Arts and Culture; reports published 2021, 2023 and 2025). Users of the data must cite this source.
+The survey microdata are not included and are not redistributed.
+
+The data describe synthetic residents grounded in weighted estimates of an online panel of Seoul residents,
+not the Seoul population. This resource is not an official statistic or product of the Seoul Foundation for
+Arts and Culture and implies no approval or endorsement by it.

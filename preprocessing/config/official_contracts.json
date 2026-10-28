@@ -1,0 +1,134 @@
+{
+  "generated_by": "scripts/validate_official.py",
+  "waves": [
+    2014,
+    2015,
+    2016,
+    2018,
+    2020,
+    2022,
+    2024
+  ],
+  "regimes": {
+    "R1": [
+      2014
+    ],
+    "R2": [
+      2015
+    ],
+    "R3": [
+      2016,
+      2018,
+      2020
+    ],
+    "R4": [
+      2022
+    ],
+    "R5": [
+      2024
+    ]
+  },
+  "battery_vars_confirmed": 341,
+  "domain_declarations": {
+    "n": 1516,
+    "routed": 936
+  },
+  "domain_item_nonresponse": {
+    "cells": 7415504,
+    "item_nonresponse": 261618,
+    "pct": 3.53,
+    "satisfaction_gate": 3433,
+    "pct_excl_satisfaction_gate": 3.48
+  },
+  "reproduction": {
+    "2018": {
+      "cells": 10,
+      "max_abs_error": 53.808,
+      "exact": 0
+    },
+    "2020": {
+      "cells": 231,
+      "max_abs_error": 3.563,
+      "exact": 46
+    },
+    "2022": {
+      "cells": 341,
+      "max_abs_error": 0.05,
+      "exact": 341
+    },
+    "2024": {
+      "cells": 363,
+      "max_abs_error": 0.05,
+      "exact": 363
+    }
+  },
+  "general_frame_n": {
+    "2016": 2000,
+    "2018": 2545,
+    "2020": 1052,
+    "2022": 1104,
+    "2024": 5211
+  },
+  "general_population_waves": [
+    2016,
+    2018,
+    2020,
+    2022,
+    2024
+  ],
+  "domain_coverage_gap": [],
+  "domain_item_gates": {
+    "sibling_experienced": 132,
+    "attendance_battery": 66,
+    "exclusive_branch": 39
+  },
+  "registry": {
+    "rows": 3844,
+    "files": 11,
+    "tier_A_share_primary": 0.6759
+  },
+  "living_area_rank_test": {
+    "rank_null_bootstrap_crude": {
+      "statistic": 0.0667,
+      "p_value": 0.0163
+    },
+    "rank_null_bootstrap_std": {
+      "statistic": -0.05,
+      "p_value": 0.0019
+    },
+    "rank_null_bootstrap_unweighted": {
+      "statistic": -0.15,
+      "p_value": 0.0006
+    },
+    "baseline_vs_change_crude": {
+      "statistic": -0.6628,
+      "p_value": 0.0517
+    },
+    "baseline_vs_change_std": {
+      "statistic": -0.7899,
+      "p_value": 0.0113
+    },
+    "baseline_vs_change_unweighted": {
+      "statistic": -0.7405,
+      "p_value": 0.0225
+    }
+  },
+  "invariants": [
+    "the break in rank order across the nine living areas is not explained by sampling error (bootstrap p<0.05)",
+    "2014 and 2015 have no general-public frame (foundation members and the cultural policy panel)",
+    "the general-public series is the five waves 2016 to 2024",
+    "the published arts participation rate for 2014 and 2015 is not an attendance rate but the share naming the arts among their top three leisure activities",
+    "2016, 2018 and 2020 are one regime (same item set, order and response format)",
+    "the published 2022 and 2024 figures reproduce from the microdata to within 0.10 pp",
+    "2018 does not rebuild: the cultural-activity adjustment factor used in the published figures is not in the delivered file",
+    "the analysis base for 2014 is the 2,110 Seoul residents",
+    "not_asked_in_wave is never imputed",
+    "nothing is phrased as an attack on the foundation's published figures -- the subject stays on the limits of the data we hold",
+    "person-level files never sit in data/processed/official/",
+    "every output is declared in config/output_manifest.csv",
+    "person-level files are outside the repository by git check-ignore",
+    "every person-level table joins to the spine on row_uid alone, at 100 per cent",
+    "the out-of-battery harmonisation and the registry sweep all 11 raw files (2026-09-09)",
+    "item-level gates are decided from the data, and applied only at 0.95 agreement or above"
+  ]
+}

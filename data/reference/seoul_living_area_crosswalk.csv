@@ -1,0 +1,26 @@
+living_area,living_area_ko,district_code,district_name,source,source_file,source_line
+dosim,도심생활권,1111000000,종로구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4454
+dosim,도심생활권,1114000000,중구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4454
+dosim,도심생활권,1117000000,용산구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4454
+dongbuk1,동북1생활권,1120000000,성동구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4455
+dongbuk1,동북1생활권,1121500000,광진구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4455
+dongbuk1,동북1생활권,1123000000,동대문구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4455
+dongbuk1,동북1생활권,1126000000,중랑구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4455
+dongbuk2,동북2생활권,1129000000,성북구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4456
+dongbuk2,동북2생활권,1130500000,강북구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4456
+dongbuk2,동북2생활권,1132000000,도봉구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4456
+dongbuk2,동북2생활권,1135000000,노원구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4456
+seobuk,서북생활권,1138000000,은평구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4457
+seobuk,서북생활권,1141000000,서대문구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4457
+seobuk,서북생활권,1144000000,마포구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4457
+seonam1,서남1생활권,1147000000,양천구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4458
+seonam1,서남1생활권,1150000000,강서구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4458
+seonam2,서남2생활권,1153000000,구로구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4459
+seonam2,서남2생활권,1154500000,금천구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4459
+seonam2,서남2생활권,1156000000,영등포구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4459
+seonam3,서남3생활권,1159000000,동작구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4460
+seonam3,서남3생활권,1162000000,관악구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4460
+dongnam1,동남1생활권,1165000000,서초구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4461
+dongnam1,동남1생활권,1168000000,강남구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4461
+dongnam2,동남2생활권,1171000000,송파구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4462
+dongnam2,동남2생활권,1174000000,강동구,2024 서울시민 문화향유 실태조사 설문지 '생활권 참고',data/interim/pdf_text/2024_1.txt,4462

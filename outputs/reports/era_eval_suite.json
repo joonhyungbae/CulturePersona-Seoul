@@ -1,0 +1,290 @@
+[
+  {
+    "wave": 2020,
+    "ablation": "margins",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.01994967294560363,
+    "root_tvd_age_band": 0.10872574699681195,
+    "width_mean_real_weighted": 1.5969826063064512,
+    "width_mean_syn": 1.5786,
+    "width_mae_weighted": 0.018382606306451166,
+    "width_mae_by_age": 0.08620175421643306,
+    "depth_mean_real_weighted": 3.918533377851979,
+    "genre_phi_mad": 0.085338659647954,
+    "genre_pair_joint_tvd": 0.019208991022677306,
+    "top_tvd_anchors": [
+      [
+        "education",
+        0.07825176041526535
+      ],
+      [
+        "occupation",
+        0.07159918705196848
+      ],
+      [
+        "seoul_years_band",
+        0.05772267429977448
+      ],
+      [
+        "household_size_band",
+        0.027768873251782927
+      ],
+      [
+        "attend_movie",
+        0.025246920718476812
+      ]
+    ]
+  },
+  {
+    "wave": 2020,
+    "ablation": "structure_T",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.020918853715854262,
+    "root_tvd_age_band": 0.10852574699681194,
+    "width_mean_real_weighted": 1.5969826063064512,
+    "width_mean_syn": 1.5848666666666666,
+    "width_mae_weighted": 0.012115939639784523,
+    "width_mae_by_age": 0.08128990268396488,
+    "depth_mean_real_weighted": 3.918533377851979,
+    "genre_phi_mad": 0.0893049098380678,
+    "genre_pair_joint_tvd": 0.019422608808643948,
+    "top_tvd_anchors": [
+      [
+        "education",
+        0.08091842708193199
+      ],
+      [
+        "occupation",
+        0.07735053559515481
+      ],
+      [
+        "seoul_years_band",
+        0.060122674299774526
+      ],
+      [
+        "household_income_band",
+        0.031273741289607256
+      ],
+      [
+        "attend_movie",
+        0.023780254051810168
+      ]
+    ]
+  },
+  {
+    "wave": 2022,
+    "ablation": "margins",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.017122780669657275,
+    "root_tvd_age_band": 0.052960354068123806,
+    "width_mean_real_weighted": 1.8627899443295532,
+    "width_mean_syn": 1.7481333333333333,
+    "width_mae_weighted": 0.11465661099621993,
+    "width_mae_by_age": 0.0467480372370047,
+    "depth_mean_real_weighted": 4.565204221801458,
+    "genre_phi_mad": 0.06538594760517936,
+    "genre_pair_joint_tvd": 0.021197278928722203,
+    "top_tvd_anchors": [
+      [
+        "occupation",
+        0.04322453384285043
+      ],
+      [
+        "attend_exhibition",
+        0.035400081956516366
+      ],
+      [
+        "household_size_band",
+        0.03133579119907828
+      ],
+      [
+        "attend_museum",
+        0.03076914898186904
+      ],
+      [
+        "education",
+        0.03024195850347516
+      ]
+    ]
+  },
+  {
+    "wave": 2022,
+    "ablation": "structure_T",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.015718086633772322,
+    "root_tvd_age_band": 0.051360354068123795,
+    "width_mean_real_weighted": 1.8627899443295532,
+    "width_mean_syn": 1.7433333333333334,
+    "width_mae_weighted": 0.11945661099621985,
+    "width_mae_by_age": 0.05029252505240178,
+    "depth_mean_real_weighted": 4.565204221801458,
+    "genre_phi_mad": 0.06804957517179787,
+    "genre_pair_joint_tvd": 0.021298936367056962,
+    "top_tvd_anchors": [
+      [
+        "occupation",
+        0.03535786717618379
+      ],
+      [
+        "attend_exhibition",
+        0.03200008195651638
+      ],
+      [
+        "household_size_band",
+        0.031069124532411577
+      ],
+      [
+        "attend_museum",
+        0.03076914898186904
+      ],
+      [
+        "viewing_companion",
+        0.026597356319289795
+      ]
+    ]
+  },
+  {
+    "wave": 2024,
+    "ablation": "margins",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.007963242660380404,
+    "root_tvd_age_band": 0.008326540011511396,
+    "width_mean_real_weighted": 1.919238816110628,
+    "width_mean_syn": 1.8701333333333334,
+    "width_mae_weighted": 0.04910548277729454,
+    "width_mae_by_age": 0.0650428330555729,
+    "depth_mean_real_weighted": 5.4557278018796005,
+    "genre_phi_mad": 0.0448191320002815,
+    "genre_pair_joint_tvd": 0.015723508291930165,
+    "top_tvd_anchors": [
+      [
+        "attend_exhibition",
+        0.01980460215265109
+      ],
+      [
+        "attend_movie",
+        0.018546574553820444
+      ],
+      [
+        "attend_museum",
+        0.01771374142740452
+      ],
+      [
+        "viewing_companion",
+        0.017267198610900536
+      ],
+      [
+        "household_income_band",
+        0.01167483787081501
+      ]
+    ]
+  },
+  {
+    "wave": 2024,
+    "ablation": "structure_T",
+    "n_syn": 15000,
+    "mean_marginal_tvd_nonroot": 0.00790365588877393,
+    "root_tvd_age_band": 0.008801036269431628,
+    "width_mean_real_weighted": 1.919238816110628,
+    "width_mean_syn": 1.8611333333333333,
+    "width_mae_weighted": 0.05810548277729466,
+    "width_mae_by_age": 0.05494336708253018,
+    "depth_mean_real_weighted": 5.4557278018796005,
+    "genre_phi_mad": 0.0477247156421046,
+    "genre_pair_joint_tvd": 0.014479844953180774,
+    "top_tvd_anchors": [
+      [
+        "viewing_companion",
+        0.021060529556148143
+      ],
+      [
+        "attend_exhibition",
+        0.01667126881931774
+      ],
+      [
+        "attend_museum",
+        0.016580408094071186
+      ],
+      [
+        "attend_popular_performance",
+        0.01082506642540755
+      ],
+      [
+        "attend_outdoor_event",
+        0.01056628598593215
+      ]
+    ]
+  },
+  {
+    "wave": 2016,
+    "ablation": "margins",
+    "n_syn": 5000,
+    "mean_marginal_tvd_nonroot": 0.03645238095238096,
+    "root_tvd_age_band": 0.137,
+    "width_mean_real_weighted": 4.1325,
+    "width_mean_syn": 3.7946,
+    "width_mae_weighted": 0.3379000000000003,
+    "width_mae_by_age": 0.4746669720847305,
+    "depth_mean_real_weighted": 14.307,
+    "genre_phi_mad": 0.10556136695894265,
+    "genre_pair_joint_tvd": 0.05130444444444445,
+    "top_tvd_anchors": [
+      [
+        "occupation",
+        0.10690000000000002
+      ],
+      [
+        "seoul_years_band",
+        0.07390000000000005
+      ],
+      [
+        "attend_outdoor_event",
+        0.05720000000000003
+      ],
+      [
+        "leisure_companion",
+        0.05330000000000001
+      ],
+      [
+        "attend_exhibition",
+        0.05080000000000004
+      ]
+    ]
+  },
+  {
+    "wave": 2018,
+    "ablation": "margins",
+    "n_syn": 5000,
+    "mean_marginal_tvd_nonroot": 0.01659883992889886,
+    "root_tvd_age_band": 0.11112289535798583,
+    "width_mean_real_weighted": 3.9976424361493126,
+    "width_mean_syn": 3.879,
+    "width_mae_weighted": 0.11864243614931258,
+    "width_mae_by_age": 0.1586920533221091,
+    "depth_mean_real_weighted": 15.193713163064833,
+    "genre_phi_mad": 0.09909259073477883,
+    "genre_pair_joint_tvd": 0.03659739794804628,
+    "top_tvd_anchors": [
+      [
+        "occupation",
+        0.051474263261296664
+      ],
+      [
+        "attend_exhibition",
+        0.03528055009823183
+      ],
+      [
+        "seoul_years_band",
+        0.033653438113948886
+      ],
+      [
+        "household_income_band",
+        0.03136660117878192
+      ],
+      [
+        "attend_theater",
+        0.024474263261296647
+      ]
+    ]
+  }
+]

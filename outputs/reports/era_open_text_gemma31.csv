@@ -1,0 +1,11 @@
+wave,metric,method,value,lo,hi
+2024,cell_theme_tvd,personas,0.6234247919953311,,
+2024,cell_theme_tvd,marginal,0.10712374555452384,,
+2024,cell_theme_tvd,shuffled,0.5621010654759309,0.5475944744071229,0.5772302000812404
+2024,cell_theme_tvd,split_half,0.11907479041898812,0.09969904369556502,0.13584807157484302
+2024,nearest_cell_hit,personas,0.25925925925925924,,
+2024,nearest_cell_hit,chance,0.125,,
+2024,cos_own_minus_other,personas,0.011305641044269909,,
+2024,n_real,-,2665.0,,
+2024,n_personas,-,297.0,,
+2024,k,-,10.0,,

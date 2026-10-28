@@ -1,0 +1,19 @@
+{
+  "wave": 2024,
+  "n_sample": 30000,
+  "seed": 20260911,
+  "backoff_min": 0.7718,
+  "backoff_min_node": "attend_any",
+  "backoff_marginal_max": 0.0,
+  "genre_root": "movie",
+  "feasible_share": 100.0,
+  "sampling_zero_share": 5.053333333333334,
+  "n_new_combos": 411,
+  "n_real_combos": 742,
+  "coverage_keys": [
+    "age_band",
+    "education",
+    "occupation",
+    "household_income_band"
+  ]
+}

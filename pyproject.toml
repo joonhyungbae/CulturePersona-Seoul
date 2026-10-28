@@ -1,0 +1,49 @@
+[project]
+name = "sfac-persona"
+version = "0.1.0"
+description = "Survey-grounded synthetic persona dataset of Seoul citizens' cultural participation (2024 Seoul Citizens' Cultural Participation Survey)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-4.0" }
+authors = [{ name = "The CulturePersona-Seoul authors" }]
+dependencies = [
+    "pydantic>=2.5",
+    "pydantic-settings>=2.1",
+    "pandas>=2.2",
+    "pyarrow>=16.0",
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "openpyxl>=3.1",
+    "jinja2>=3.1",
+    "httpx>=0.27",
+    "rich>=13.7",
+    "python-dotenv>=1.0",
+    "tqdm>=4.66",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "tabulate>=0.10.0",
+]
+
+[project.optional-dependencies]
+# Narrative generation and embedding probes; heavy, install only when needed.
+gen = ["anthropic>=0.34", "huggingface-hub>=0.24", "datasets>=2.20"]
+embed = ["sentence-transformers>=3.0", "torch>=2.4", "kiwipiepy>=0.18", "nltk>=3.9"]
+dev = ["pytest>=8.0", "ruff>=0.4", "mypy>=1.10"]
+# Microdata preparation (preprocessing/); needs the survey records.
+preprocess = ["xlrd>=2.0", "pyreadstat>=1.2"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sfac_persona"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["preprocessing"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

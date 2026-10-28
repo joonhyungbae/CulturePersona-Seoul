@@ -1,0 +1,12 @@
+canonical_var,estimate_pct,n,published_pct,diff_pp,ok,note
+offline_total,93.7,2000,,,True,unweighted_diagnostic_skip_pub
+exhibition,52.3,2000,,,True,unweighted_diagnostic_skip_pub
+museum,50.15,2000,,,True,unweighted_diagnostic_skip_pub
+western_classical,32.1,2000,,,True,unweighted_diagnostic_skip_pub
+popular_performance,36.0,2000,,,True,unweighted_diagnostic_skip_pub
+dance_performance,10.95,2000,,,True,unweighted_diagnostic_skip_pub
+traditional,18.25,2000,,,True,unweighted_diagnostic_skip_pub
+theater,50.7,2000,,,True,unweighted_diagnostic_skip_pub
+literature_event,14.15,2000,,,True,unweighted_diagnostic_skip_pub
+movie,85.75,2000,,,True,unweighted_diagnostic_skip_pub
+outdoor_event,62.9,2000,,,True,unweighted_diagnostic_skip_pub

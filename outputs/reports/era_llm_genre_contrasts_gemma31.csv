@@ -1,0 +1,3 @@
+contrast,auc_diff,lo,hi
+shot_narr - shot_anchor,-0.0576,-0.0962,-0.022
+shot_anchor - zero,0.0014,-0.0397,0.0434

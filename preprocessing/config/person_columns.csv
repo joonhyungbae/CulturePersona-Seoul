@@ -1,0 +1,104 @@
+file,column,description
+official_person_keys.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_keys.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_keys.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_keys.parquet,person_id,"The raw respondent ID. It has 890 duplicates in 2020, so do not use it as a join key"
+official_person_keys.parquet,frame_code,"The code value of the raw frame variable (DEPART in 2015, TYPE in 2016, the frame variable in 2022)"
+official_person_keys.parquet,frame_group,Frame branch -- general / interest / sfac_member / disabled / multicult
+official_person_keys.parquet,frame_label,The frame label in the codebook's own wording
+official_person_keys.parquet,in_seoul,"Whether they live in Seoul. In 2014, 795 people living outside Seoul were screened out of the battery"
+official_person_keys.parquet,sex,"Sex, male or female"
+official_person_keys.parquet,birth_year,"Birth year. Absent in 2014, which carries age bands only"
+official_person_keys.parquet,age,Age in years at the time of the survey
+official_person_keys.parquet,age_band,"Age band. The boundaries differ by wave, so it is kept as a string (60+ appears alongside 60-69 and 70+)"
+official_person_keys.parquet,gu_code,District code. Present in every wave
+official_person_keys.parquet,dong_code,"Administrative neighbourhood identifier. Present only in 2015, 2016 and 2024, and **depending on the wave it is a code or a name** (2016 mixes both within one wave) -- so it is kept as a string. The sample per neighbourhood is thin; do not estimate at that level"
+official_person_keys.parquet,weight_var,The name of the weight variable used for this row. Empty for 2014 through 2018
+official_person_keys.parquet,weight,The weight. Missing for the four waves 2014 through 2018 -- do not fill it with 1; state that those waves are unweighted
+official_person_master.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_master.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_master.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_master.parquet,person_id,"The raw respondent ID. It has 890 duplicates in 2020, so do not use it as a join key"
+official_person_master.parquet,frame_code,"The code value of the raw frame variable (DEPART in 2015, TYPE in 2016, the frame variable in 2022)"
+official_person_master.parquet,frame_group,Frame branch -- general / interest / sfac_member / disabled / multicult
+official_person_master.parquet,frame_label,The frame label in the codebook's own wording
+official_person_master.parquet,in_seoul,"Whether they live in Seoul. In 2014, 795 people living outside Seoul were screened out of the battery"
+official_person_master.parquet,sex,"Sex, male or female"
+official_person_master.parquet,birth_year,"Birth year. Absent in 2014, which carries age bands only"
+official_person_master.parquet,age,Age in years at the time of the survey
+official_person_master.parquet,age_band,"Age band. The boundaries differ by wave, so it is kept as a string (60+ appears alongside 60-69 and 70+)"
+official_person_master.parquet,gu_code,District code. Present in every wave
+official_person_master.parquet,dong_code,"Administrative neighbourhood identifier. Present only in 2015, 2016 and 2024, and **depending on the wave it is a code or a name** (2016 mixes both within one wave) -- so it is kept as a string. The sample per neighbourhood is thin; do not estimate at that level"
+official_person_master.parquet,weight_var,The name of the weight variable used for this row. Empty for 2014 through 2018
+official_person_master.parquet,weight,The weight. Missing for the four waves 2014 through 2018 -- do not fill it with 1; state that those waves are unweighted
+official_person_master.parquet,regime_id,The instrument regime of this wave's attendance battery
+official_person_master.parquet,n_items_asked,"Items in this wave's battery (9 in 2014, 8 in 2015, 10 from 2016)"
+official_person_master.parquet,items_attended,Number of items they reported attending
+official_person_master.parquet,items_asked,Number of items actually asked
+official_person_master.parquet,total_visits,Total visits summed across every battery item
+official_person_master.parquet,self_paid_visits,Total self-paid visits
+official_person_master.parquet,total_cost_krw,"Total annual spending in KRW, converted from each wave's own unit"
+official_person_master.parquet,battery_asked,Whether this respondent received the attendance battery. False for the 795 non-Seoul cases in 2014
+official_person_master.parquet,attended_any,Whether they attended anything at all. Missing for rows that never received the battery
+official_person_item.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_item.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_item.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_item.parquet,person_id,"The raw respondent ID. It has 890 duplicates in 2020, so do not use it as a join key"
+official_person_item.parquet,position,The choice position in that wave's battery. In 2022 popular performance moved from 9 to 4
+official_person_item.parquet,canonical_item,The item name that runs across waves
+official_person_item.parquet,attended,"Attended, as 1/0. In a multiple-response wave this is whether the slot was selected"
+official_person_item.parquet,total_count,Annual visits
+official_person_item.parquet,self_paid_count,Visits they paid for themselves
+official_person_item.parquet,annual_cost_krw,"Annual spending, converted to KRW"
+official_person_item.parquet,cost_unit_original,The spending unit in the raw data (KRW or units of ten thousand KRW). Kept so the conversion can be traced
+official_person_item_imputed.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_item_imputed.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_item_imputed.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_item_imputed.parquet,person_id,"The raw respondent ID. It has 890 duplicates in 2020, so do not use it as a join key"
+official_person_item_imputed.parquet,position,The choice position in that wave's battery
+official_person_item_imputed.parquet,canonical_item,The item name that runs across waves
+official_person_item_imputed.parquet,attended,"Attended, as 1/0"
+official_person_item_imputed.parquet,total_count,Annual visits
+official_person_item_imputed.parquet,self_paid_count,Visits they paid for themselves
+official_person_item_imputed.parquet,annual_cost_krw,"Annual spending, converted to KRW"
+official_person_item_imputed.parquet,cost_unit_original,The spending unit in the raw data (KRW or units of ten thousand KRW)
+official_person_item_imputed.parquet,is_imputed,Whether this cell is imputed. Used to recover the pre-imputation version
+official_person_item_imputed.parquet,impute_method,The imputation method -- skip_logic_zero (a value that follows logically) or hotdeck_m5_within_frame (a hot deck within the frame)
+official_person_item_imputed.parquet,frame_code,"The code value of the raw frame variable (DEPART in 2015, TYPE in 2016, the frame variable in 2022)"
+official_person_domain.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_domain.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_domain.parquet,family,"The conceptual family (primary_family). Where a variable spans two families, only the primary one appears here"
+official_person_domain.parquet,canonical_item,The item name that runs across waves
+official_person_domain.parquet,measure,"What is being measured -- experienced, threshold_recode, frequency, cost, satisfaction and so on"
+official_person_domain.parquet,variable,The raw variable name
+official_person_domain.parquet,value,The value. Not the raw coding as it stands but a value cleaned to reflect polarity and unit
+official_person_domain.parquet,unit,"The unit of the value. Online spending is in KRW in 2020 and in units of ten thousand KRW in 2022; combined without conversion they are out by a factor of 10,000"
+official_person_domain.parquet,polarity,What a larger value means. A 1 = yes / 2 = no coding is high_is_less
+official_person_domain_imputed.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_domain_imputed.parquet,canonical_item,The item name that runs across waves
+official_person_domain_imputed.parquet,value,The value. Not the raw coding as it stands but a value cleaned to reflect polarity and unit
+official_person_domain_imputed.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_domain_imputed.parquet,family,"The conceptual family (primary_family). Where a variable spans two families, only the primary one appears here"
+official_person_domain_imputed.parquet,measure,"What is being measured -- experienced, threshold_recode, frequency, cost, satisfaction and so on"
+official_person_domain_imputed.parquet,is_imputed,Whether this cell is imputed. Used to recover the pre-imputation version
+official_person_wavelocal.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_wavelocal.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_wavelocal.parquet,variable,The raw variable name
+official_person_wavelocal.parquet,value,The value. Not the raw coding as it stands but a value cleaned to reflect polarity and unit
+official_person_wavelocal.parquet,label,The codebook's question label
+official_person_text.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_text.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_text.parquet,variable,The raw variable name
+official_person_text.parquet,text,"Open-ended response, verbatim. It carries a re-identification risk -- always review before releasing"
+official_person_text.parquet,label,The codebook's question label
+official_person_domain.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_domain_imputed.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_wavelocal.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_text.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_canonical.parquet,wave,"Survey wave (2014, 2015, 2016, 2018, 2020, 2022, 2024)"
+official_person_canonical.parquet,source_group,The group within the raw file. mixed means one file holds several frames and must be split on a frame variable
+official_person_canonical.parquet,row_uid,"The join key, of the form {wave}:{source_group}:{raw row number}, unique across every wave. Join on this and nothing else"
+official_person_canonical.parquet,domain,"Conceptual domain -- demographics, leisure or attitude"
+official_person_canonical.parquet,canonical_var,The variable name that runs across waves. Called by this name however the source variable is named
+official_person_canonical.parquet,source_var,The raw variable name in that wave. Kept so the mapping can be traced
+official_person_canonical.parquet,value,The numeric value in the raw coding as it stands. **The number of choices can differ by wave** -- check scale_stable in official_canonical_map.csv first

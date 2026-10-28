@@ -1,0 +1,12 @@
+canonical_var,estimate_pct,n,published_pct,diff_pp,ok,note
+offline_total,94.9312,2545,,,True,unweighted_diagnostic_skip_pub
+exhibition,65.1081,2545,,,True,unweighted_diagnostic_skip_pub
+museum,51.002,2545,,,True,unweighted_diagnostic_skip_pub
+western_classical,36.778,2545,,,True,unweighted_diagnostic_skip_pub
+popular_performance,24.2436,2545,,,True,unweighted_diagnostic_skip_pub
+dance_performance,11.6699,2545,,,True,unweighted_diagnostic_skip_pub
+traditional,16.3851,2545,,,True,unweighted_diagnostic_skip_pub
+theater,49.5874,2545,,,True,unweighted_diagnostic_skip_pub
+literature_event,12.5344,2545,,,True,unweighted_diagnostic_skip_pub
+movie,89.0766,2545,,,True,unweighted_diagnostic_skip_pub
+outdoor_event,43.3792,2545,,,True,unweighted_diagnostic_skip_pub

@@ -1,0 +1,32 @@
+{
+  "n_checks": 270,
+  "n_fails": 0,
+  "n_person": 91936,
+  "waves": [
+    2014,
+    2016,
+    2018,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "items": [
+    "literature_event",
+    "exhibition",
+    "western_classical",
+    "traditional",
+    "theater",
+    "musical",
+    "dance_performance",
+    "movie",
+    "popular_performance"
+  ],
+  "null_nonattend": [
+    2020,
+    2021,
+    2025
+  ]
+}

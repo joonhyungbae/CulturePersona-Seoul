@@ -1,0 +1,137 @@
+wave,source_column,family,canonical,measure,position,in_spec_items,note
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑴ 문학행사,attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑵ 미술 전시회,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑶ 서양음악,attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑷ 전통예술,attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑸ 연극,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑹ 뮤지컬,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑺ 무용,attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑻ 영화,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2014,문1-1. 예술행사 관람실태_직접관람 횟수⑼ 대중음악^ 연예,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (1)문학행사,attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (2)역사^철학강의 및 역사탐방,attendance,history_philosophy,count,2,no,Count of visits attended in person. zero_coding=explicit_zero. A tenth item present in 2016 only. Not put into Spec.items (wave-local).
+2016,문1-1.문화예술행사 직접관람 횟수 - (3)미술전시회,attendance,exhibition,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (4)서양음악,attendance,western_classical,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (5)전통예술,attendance,traditional,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (6)연극,attendance,theater,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2016,문1-1.문화예술행사 직접관람 횟수 - (7)뮤지컬,attendance,musical,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2016,문1-1.문화예술행사 직접관람 횟수 - (8)무용,attendance,dance_performance,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (9)영화,attendance,movie,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2016,문1-1.문화예술행사 직접관람 횟수 - (10)대중음악^ 연예,attendance,popular_performance,count,10,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태(직접관람) 횟수_① 문학행사(시화전^ 도서전시회^ 작가와의 대화),attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태(직접관람) 횟수_② 미술(사진^서예^건축^디자인 포함) 전시회,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태(직접관람) 횟수_③ 서양음악(클래식^ 오페라^ 서양악기 관련),attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태(직접관람) 횟수_④ 전통예술(국악^ 풍물^ 민속극),attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑤ 연극,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2018,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑥ 뮤지컬,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2018,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑦ 무용(서양무용^ 한국무용^ 현대무용),attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑧ 영화,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2018,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑨ 대중음악(가요콘서트)^ 연예,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2020,문1-1.문화예술행사관람실태직접관람횟수_①문학행사(시화전^도서전시회^작가와의대화),attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_②미술(사진^서예^건축^디자인포함)전시회,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_③서양음악(클래식^오페라^서양악기관련),attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_④전통예술(국악^풍물^민속극),attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_⑤연극,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=null_nonattend. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2020,문1-1.문화예술행사관람실태직접관람횟수_⑥뮤지컬,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=null_nonattend. The Seoul survey has no separate item for it.
+2020,문1-1.문화예술행사관람실태직접관람횟수_⑦무용(서양무용^한국무용^현대무용),attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_⑧영화,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2020,문1-1.문화예술행사관람실태직접관람횟수_⑨대중음악(가요콘서트)^연예,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_① 문학행사(시화전^ 도서전시회^ 작가와의 대화),attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_② 미술(사진^ 서예^ 건축^ 디자인 포함) 전시회,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_③ 서양음악(클래식^ 오페라^ 서양악기 관련),attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_④ 전통예술(국악^ 풍물^ 민속극),attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑤ 연극,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=null_nonattend. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑥ 뮤지컬,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=null_nonattend. The Seoul survey has no separate item for it.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑦ 무용(서양무용^ 한국무용^ 현대무용),attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑧ 영화,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2021,문1-1. 문화예술행사 관람실태 직접관람 횟수_⑨ 대중음악(가요콘서트)^ 연예,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2022,문화예술행사 관람실태 직접관람 횟수_(문학행사),attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(미술전시회),attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(서양음악),attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(전통예술),attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(연극),attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2022,문화예술행사 관람실태 직접관람 횟수_(뮤지컬),attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2022,문화예술행사 관람실태 직접관람 횟수_(무용),attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(영화),attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2022,문화예술행사 관람실태 직접관람 횟수_(대중음악/연예),attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <문학행사>,attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <미술전시회>,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <서양음악>,attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <전통예술>,attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <연극>,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2023,문화예술행사 관람실태 직접관람 횟수 <뮤지컬>,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2023,문화예술행사 관람실태 직접관람 횟수 <무용>,attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <영화>,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2023,문화예술행사 관람실태 직접관람 횟수 <대중음악/연예>,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <문학행사>,attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <미술전시회>,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <서양음악>,attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <전통예술>,attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <연극>,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=explicit_zero. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2024,문화예술행사 직접관람 횟수 <뮤지컬>,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=explicit_zero. The Seoul survey has no separate item for it.
+2024,문화예술행사 직접관람 횟수 <무용>,attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <영화>,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2024,문화예술행사 직접관람 횟수 <대중음악/연예>,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=explicit_zero.
+2025,문화예술행사 직접관람 횟수 <문학행사>,attendance,literature_event,count,1,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <미술전시회>,attendance,exhibition,count,2,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <서양음악>,attendance,western_classical,count,3,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <전통예술>,attendance,traditional,count,4,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <연극>,attendance,theater,count,5,yes,Count of visits attended in person. zero_coding=null_nonattend. A different construct from Seoul's theater (which includes musicals) -- not combined.
+2025,문화예술행사 직접관람 횟수 <뮤지컬>,attendance,musical,count,6,yes,Count of visits attended in person. zero_coding=null_nonattend. The Seoul survey has no separate item for it.
+2025,문화예술행사 직접관람 횟수 <무용>,attendance,dance_performance,count,7,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <영화>,attendance,movie,count,8,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2025,문화예술행사 직접관람 횟수 <대중음악/연예>,attendance,popular_performance,count,9,yes,Count of visits attended in person. zero_coding=null_nonattend.
+2014,17개 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2014,문25. 본인 성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2014,문22. 만나이,demographics,age,code,,no,"Named as age in years, but the values are age bands 1-7"
+2014,문20. 본인 교육 정도,demographics,edu,code,,no,Already the analytic 4 categories: 1 = primary or less ... 4 = bachelor or above
+2014,문28-2. 가구 소득,demographics,income,code,,no,8 categories. 8 = no answer -> NA. 1-7 become inc_ord
+2014,가중치,demographics,weight,code,,no,"Relative weight, mean about 1"
+2016,SQ1. 지역번호,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2016,문21.응답자 성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2016,문22.응답자 연령,demographics,age,code,,no,"Age in years, continuous -> the midpoints of seven bands"
+2016,문26.응답자 학력,demographics,edu,code,,no,"8 categories -> edu_ord4: 1-2 -> 1, 3 -> 2, 4 -> 3, 5-8 -> 4"
+2016,문31-2.지난 1년간 월평균 소득(세전) - 가구 전체,demographics,income,code,,no,"12 categories -> inc_ord7: 1-2 -> 1, 3 -> 2, 4 -> 3, 5 -> 4, 6 -> 5, 7 -> 6, 8-12 -> 7"
+2016,최종가중치,demographics,weight,code,,no,Population weight
+2018,[분석용] 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2018,[분석용] 성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2018,[분석용] 연령구분(70세이상),demographics,age,code,,no,Age band 1-7
+2018,[분석용] 학력,demographics,edu,code,,no,The analytic 4 categories
+2018,[분석용] 가구소득,demographics,income,code,,no,The analytic 7 categories
+2018,최종 가중값,demographics,weight,code,,no,Population weight
+2020,시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2020,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2020,연령,demographics,age,code,,no,Age band 1-7
+2020,학력,demographics,edu,code,,no,4 categories
+2020,가구소득,demographics,income,code,,no,7 categories
+2020,가중치,demographics,weight,code,,no,Population weight
+2021,시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2021,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2021,연령,demographics,age,code,,no,Age band 1-7
+2021,학력,demographics,edu,code,,no,4 categories
+2021,가구소득,demographics,income,code,,no,7 categories
+2021,가중치,demographics,weight,code,,no,Population weight
+2022,17개 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2022,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2022,연령,demographics,age,code,,no,Age band 1-7
+2022,학력,demographics,edu,code,,no,4 categories
+2022,가구소득,demographics,income,code,,no,7 categories
+2022,가중치,demographics,weight,code,,no,Population weight
+2023,17개 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2023,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2023,연령,demographics,age,code,,no,Age band 1-7
+2023,학력,demographics,edu,code,,no,The analytic 4 categories (highest education 8 is not used)
+2023,가구소득,demographics,income,code,,no,7 categories
+2023,가중치,demographics,weight,code,,no,Population weight
+2024,17개 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2024,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2024,연령,demographics,age,code,,no,Age band 1-7
+2024,학력,demographics,edu,code,,no,The analytic 4 categories
+2024,가구소득,demographics,income,code,,no,7 categories
+2024,최종가중값,demographics,weight,code,,no,Population weight
+2025,특성_17개 시도,demographics,sido,code,,no,Province code. Not used in the ablation experiment's demographics; kept only.
+2025,성별,demographics,sex,code,,no,"1 = male, 2 = female, mapped to female"
+2025,특성_연령,demographics,age,code,,no,"Characteristics block, age 1-7"
+2025,특성_학력,demographics,edu,code,,no,"Characteristics block, education, 4 categories"
+2025,특성_가구소득,demographics,income,code,,no,"Characteristics block, household income, 7 categories"
+2025,최종가중치_모집단 기준,demographics,weight,code,,no,Population weight

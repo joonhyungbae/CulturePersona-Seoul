@@ -1,0 +1,4 @@
+wave,rows,n_above_null,mean_rho2,mean_perm95,mean_ci_width,nonattender_share,atlas_attend_cut
+2020,27,13,0.0224,0.0091,0.0375,0.381,0.4252
+2022,27,6,0.0180,0.0109,0.0351,0.309,0.4782
+2024,27,5,0.0137,0.0083,0.0267,0.240,0.4167

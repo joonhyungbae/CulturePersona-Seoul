@@ -1,0 +1,52 @@
+layer,wave,ablation,item,metric,syn_vs_real,noise_floor,ratio_vs_floor,n_syn,note
+width_depth,2020,margins,width,mae_by_age,0.08620175421643306,,,15000,width_mean_real=1.597 syn=1.579
+width_depth,2020,margins,width,mae_by_age_popw,0.08835264074712763,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2020,margins,depth,abs_gap,0.13219942395192463,,,15000,like-for-like: real_binned=3.391 syn_proxy=3.523 (raw real=3.919; discretization bias=+0.528)
+width_depth,2020,structure_T,width,mae_by_age,0.08128990268396488,,,15000,width_mean_real=1.597 syn=1.585
+width_depth,2020,structure_T,width,mae_by_age_popw,0.0949326421668899,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2020,structure_T,depth,abs_gap,0.16136609061859142,,,15000,like-for-like: real_binned=3.391 syn_proxy=3.552 (raw real=3.919; discretization bias=+0.528)
+width_depth,2022,margins,width,mae_by_age,0.0467480372370047,,,15000,width_mean_real=1.863 syn=1.748
+width_depth,2022,margins,width,mae_by_age_popw,0.0433272818989751,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2022,margins,depth,abs_gap,0.12132428422246733,,,15000,like-for-like: real_binned=4.139 syn_proxy=4.018 (raw real=4.565; discretization bias=+0.426)
+width_depth,2022,structure_T,width,mae_by_age,0.05029252505240178,,,15000,width_mean_real=1.863 syn=1.743
+width_depth,2022,structure_T,width,mae_by_age_popw,0.05376751585614649,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2022,structure_T,depth,abs_gap,0.13369095088913419,,,15000,like-for-like: real_binned=4.139 syn_proxy=4.005 (raw real=4.565; discretization bias=+0.426)
+width_depth,2024,margins,width,mae_by_age,0.0650428330555729,,,15000,width_mean_real=1.919 syn=1.870
+width_depth,2024,margins,width,mae_by_age_popw,0.06628388533896448,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2024,margins,depth,abs_gap,0.012282736200158517,,,15000,like-for-like: real_binned=4.897 syn_proxy=4.910 (raw real=5.456; discretization bias=+0.558)
+width_depth,2024,structure_T,width,mae_by_age,0.05494336708253018,,,15000,width_mean_real=1.919 syn=1.861
+width_depth,2024,structure_T,width,mae_by_age_popw,0.060658169954645076,,,15000,age-band MAE weighted by synthetic band size
+width_depth,2024,structure_T,depth,abs_gap,0.011750597133175056,,,15000,like-for-like: real_binned=4.897 syn_proxy=4.886 (raw real=5.456; discretization bias=+0.558)
+canonical_holdout,2020,n/a,leisure_activity_1st,tvd_syn_vs_real,,0.007748832921559342,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2020,n/a,leisure_activity_1st,real_entropy,1.6235714096473681,0.007748832921559342,,15000,n_cats=12
+canonical_holdout,2020,n/a,leisure_activity_wanted_1st,tvd_syn_vs_real,,0.008694272668399453,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2020,n/a,leisure_activity_wanted_1st,real_entropy,2.0032906404941713,0.008694272668399453,,15000,n_cats=12
+canonical_holdout,2020,n/a,leisure_time_weekday,tvd_syn_vs_real,,0.010705863598665235,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2020,n/a,leisure_time_weekday,real_entropy,2.0618602765183445,0.010705863598665235,,15000,n_cats=20
+canonical_holdout,2020,n/a,leisure_time_weekend,tvd_syn_vs_real,,0.011548829871590591,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2020,n/a,leisure_time_weekend,real_entropy,2.461948063761872,0.011548829871590591,,15000,n_cats=21
+canonical_holdout,2022,n/a,leisure_activity_1st,tvd_syn_vs_real,,0.007935622591964361,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2022,n/a,leisure_activity_1st,real_entropy,1.91370075134963,0.007935622591964361,,15000,n_cats=11
+canonical_holdout,2022,n/a,leisure_activity_wanted_1st,tvd_syn_vs_real,,0.008697439179923768,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2022,n/a,leisure_activity_wanted_1st,real_entropy,2.0067579128870716,0.008697439179923768,,15000,n_cats=11
+canonical_holdout,2022,n/a,leisure_time_weekday,tvd_syn_vs_real,,0.00890900640223755,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2022,n/a,leisure_time_weekday,real_entropy,1.9316007178634147,0.00890900640223755,,15000,n_cats=13
+canonical_holdout,2022,n/a,leisure_time_weekend,tvd_syn_vs_real,,0.010948746519372663,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2022,n/a,leisure_time_weekend,real_entropy,2.429051984352515,0.010948746519372663,,15000,n_cats=16
+canonical_holdout,2024,n/a,leisure_activity_1st,tvd_syn_vs_real,,0.009674417948719798,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2024,n/a,leisure_activity_1st,real_entropy,2.100565900136863,0.009674417948719798,,15000,n_cats=12
+canonical_holdout,2024,n/a,leisure_activity_wanted_1st,tvd_syn_vs_real,,0.010201306448927704,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2024,n/a,leisure_activity_wanted_1st,real_entropy,2.172585735770631,0.010201306448927704,,15000,n_cats=11
+canonical_holdout,2024,n/a,leisure_time_weekday,tvd_syn_vs_real,,0.007629762274676917,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2024,n/a,leisure_time_weekday,real_entropy,1.9426579553863352,0.007629762274676917,,15000,n_cats=9
+canonical_holdout,2024,n/a,leisure_time_weekend,tvd_syn_vs_real,,0.010822056442990573,,15000,not_in_quant; syn TVD via SSR answer layer
+canonical_holdout,2024,n/a,leisure_time_weekend,real_entropy,2.3407254530896564,0.010822056442990573,,15000,n_cats=13
+domain_primary,2020,n/a,arts_importance,tvd_syn_vs_real,,0.005869765648257708,,15000,attitude/other; not_in_quant
+domain_primary,2020,n/a,attendance_overall,tvd_syn_vs_real,,0.005304232636093717,,15000,satisfaction/satisfaction; not_in_quant
+domain_primary,2020,n/a,cultural_life_overall,tvd_syn_vs_real,,0.00538369082844535,,15000,satisfaction/satisfaction; not_in_quant
+domain_primary,2022,n/a,arts_importance,tvd_syn_vs_real,,0.006993161766456518,,15000,attitude/other; not_in_quant
+domain_primary,2022,n/a,attendance_overall,tvd_syn_vs_real,,0.005766086783854804,,15000,satisfaction/satisfaction; not_in_quant
+domain_primary,2022,n/a,cultural_life_overall,tvd_syn_vs_real,,0.0060322290656703,,15000,satisfaction/satisfaction; not_in_quant
+domain_primary,2024,n/a,arts_importance,tvd_syn_vs_real,,0.007398637557190192,,15000,attitude/other; not_in_quant
+domain_primary,2024,n/a,attendance_overall,tvd_syn_vs_real,,0.007007577744425235,,15000,satisfaction/satisfaction; not_in_quant
+domain_primary,2024,n/a,cultural_life_overall,tvd_syn_vs_real,,0.006731357196327517,,15000,satisfaction/satisfaction; not_in_quant

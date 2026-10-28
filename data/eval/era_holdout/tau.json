@@ -1,0 +1,14 @@
+{
+  "tau": 0.05,
+  "grid": [
+    0.02,
+    0.03,
+    0.05,
+    0.07,
+    0.1
+  ],
+  "rule": "min |mean personal entropy - mean cell entropy|",
+  "wave": 2024,
+  "adr": "ADR-010",
+  "sha256": "e1f7371127226c1f"
+}

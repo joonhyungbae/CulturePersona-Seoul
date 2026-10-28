@@ -1,0 +1,10 @@
+item,n,tvd_cell_mean,mean_within_entropy
+leisure_activity_1st,20,0.8372254339011721,0.0
+leisure_activity_wanted_1st,20,0.8217298200828138,0.0
+leisure_time_weekday,20,0.6205086547248811,0.0
+leisure_time_weekend,20,0.7651847050980842,0.0
+arts_importance,20,0.6513037213771132,0.0
+attendance_overall,20,0.48878938113665227,0.0
+cultural_life_overall,20,0.5151347033552618,0.0
+effect_overall_happiness,20,0.5891508497908843,0.0
+effect_stress_relieved,20,0.5941785126060568,0.0

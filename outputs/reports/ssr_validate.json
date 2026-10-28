@@ -1,0 +1,20 @@
+{
+ "source": "era_holdout",
+ "refs": "data/eval/era_holdout/w2024/ssr_refs.json",
+ "cos": "data/eval/era_holdout/w2024/cos_release_narrative.jsonl",
+ "tau": 0.05,
+ "adr": "ADR-010",
+ "ref_max_cos": 0.8719941973686218,
+ "n_reference_sentences": 162,
+ "n_items": 9,
+ "n_options": 81,
+ "margin": {
+  "n_sentences": 2700,
+  "n_personas": 300,
+  "margin_median": 0.03200499713420868,
+  "margin_p5": 0.002168495953083039,
+  "undecided_pct": 20.88888888888889,
+  "margin_ratio_at_tau": 1.8966704281663662
+ },
+ "wave": 2024
+}

@@ -1,0 +1,12 @@
+canonical_var,published_pct,n_base,estimate_pct,n,diff_pp,ok,tol_pp
+dance_performance,4.5,5211,4.4716,5211,-0.0284,True,0.1
+exhibition,27.1,5211,27.1005,5211,0.0005,True,0.1
+literature_event,9.3,5211,9.2684,5211,-0.0316,True,0.1
+movie,47.9,5211,47.8987,5211,-0.0013,True,0.1
+museum,26.7,5211,26.7447,5211,0.0447,True,0.1
+offline_total,76.1,5211,76.0527,5211,-0.0473,True,0.1
+outdoor_event,31.2,5211,31.1633,5211,-0.0367,True,0.1
+popular_performance,17.6,5211,17.6292,5211,0.0292,True,0.1
+theater,14.2,5211,14.198,5211,-0.002,True,0.1
+traditional,5.7,5211,5.7206,5211,0.0206,True,0.1
+western_classical,7.7,5211,7.7289,5211,0.0289,True,0.1

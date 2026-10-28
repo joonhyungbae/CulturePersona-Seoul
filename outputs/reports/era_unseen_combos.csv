@@ -1,0 +1,54 @@
+section,key,n_personas,n_combos,pct_sample,pct_unseen,pct_of_rule,note
+summary,unseen,1516,411,5.053333333333334,100.0,,"응답자 조합 742개 대비 합성에만 있는 조합 411개. persona 비율 5.0533% (원고 반올림 5.1%). keys=['age_band', 'education', 'occupation', 'household_income_band']."
+rule,any,69,44,0.23,4.5514511873350925,,합집합 (a)∨(b)∨(d)∨(e). 논문이 묻는 위반 비율의 분자.
+rule,strict,29,16,0.09666666666666666,1.912928759894459,,민감도. a_graduate∨b_white∨b_homemaker∨(d)∨(e). 대학 재학 포함 라벨과 생산·서비스·기타 직업은 빼었다.
+rule,a,34,22,0.11333333333333333,2.242744063324538,,10대 × 학력 대학 졸업 이상 (재학·중퇴 포함 라벨).
+rule,a_college,19,16,0.06333333333333334,1.2532981530343008,,"10대 × '대학 졸업(재학, 중퇴포함)'. 만 18–19세 대학 재학이 이 칸에 섞인다."
+rule,a_graduate,15,6,0.05,0.9894459102902374,,"10대 × '대학원수료/졸업(재학, 중퇴포함)'. 15–19세와 학제가 맞지 않는다."
+rule,b,49,35,0.16333333333333333,3.232189973614776,,10대 × 직업이 학생도 무직/은퇴도 아님.
+rule,b_white,14,10,0.04666666666666667,0.9234828496042217,,10대 × 관리자·전문가·사무.
+rule,b_homemaker,0,0,0.0,0.0,,10대 × 전업주부.
+rule,b_other_job,35,25,0.11666666666666667,2.308707124010554,,10대 × 서비스·판매·자영업·기능·장치·단순노무·기타. 19세 취업이 가능한 칸이 섞인다.
+rule,d,0,0,0.0,0.0,,70대 이상 × 학생.
+rule,e_young_retiree,0,0,0.0,0.0,,10대 또는 20대 × 은퇴·퇴직 단독 라벨. '무직/은퇴' 결합 라벨은 제외.
+overlap,a_and_b,14,13,0.04666666666666667,0.9234828496042217,,유형은 겹칠 수 있다. 합집합은 rule.any.
+overlap,a_and_d,0,0,0.0,0.0,,유형은 겹칠 수 있다. 합집합은 rule.any.
+overlap,b_and_d,0,0,0.0,0.0,,유형은 겹칠 수 있다. 합집합은 rule.any.
+overlap,a_only,20,9,0.06666666666666667,1.3192612137203166,,유형은 겹칠 수 있다. 합집합은 rule.any.
+overlap,b_only,35,22,0.11666666666666667,2.308707124010554,,유형은 겹칠 수 있다. 합집합은 rule.any.
+overlap,d_only,0,0,0.0,0.0,,유형은 겹칠 수 있다. 합집합은 rule.any.
+not_flagged,teen_junior_college,37,16,0.12333333333333334,2.440633245382586,,위반 아님. 10대×전문대(재학·중퇴 포함)는 만 19세 재학이 가능하다.
+not_flagged,sixties_student,0,0,0.0,0.0,,위반 아님. 60대 학생은 (d)에 넣지 않았다.
+not_flagged,twenties_graduate,70,24,0.23333333333333334,4.617414248021108,,위반 아님. (c)를 적용하지 않아 20대×대학원은 세지 않는다.
+not_flagged,twenties_white,82,19,0.2733333333333333,5.408970976253298,,위반 아님. 20대×관리자·전문가·사무도 세지 않는다.
+margin,a|age_x_education_absent,0,0,0.0,0.0,0.0,연령×학력 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+margin,a_graduate|age_x_education_absent,0,0,0.0,0.0,0.0,연령×대학원 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+margin,a_college|age_x_education_absent,0,0,0.0,0.0,0.0,연령×대학 졸업(재학 포함) 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+margin,b|age_x_occupation_absent,0,0,0.0,0.0,0.0,연령×직업 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+margin,b_white|age_x_occupation_absent,0,0,0.0,0.0,0.0,연령×관리자·전문가·사무 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+margin,d|age_x_occupation_absent,0,0,0.0,0.0,,연령×학생 쌍이 응답자 프레임에 없다. 분모는 그 규칙의 미관측 페르소나.
+backoff,violation|education|full:age_band+sex,69,,0.23,4.5514511873350925,100.0,"violation 페르소나 69명 가운데 이 부모로 education 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,violation|occupation|backoff:age_band+sex|dropped:education,49,,0.16333333333333333,3.232189973614776,71.01449275362319,"violation 페르소나 69명 가운데 이 부모로 occupation 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,violation|occupation|full:age_band+sex+education,20,,0.06666666666666667,1.3192612137203166,28.985507246376812,"violation 페르소나 69명 가운데 이 부모로 occupation 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,violation|household_income_band|backoff:age_band|dropped:occupation,56,,0.18666666666666668,3.6939313984168867,81.15942028985508,"violation 페르소나 69명 가운데 이 부모로 household_income_band 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,violation|household_income_band|full:age_band+occupation,13,,0.043333333333333335,0.8575197889182058,18.840579710144926,"violation 페르소나 69명 가운데 이 부모로 household_income_band 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,unseen_ok|education|full:age_band+sex,1447,,4.823333333333333,95.44854881266491,100.0,"unseen_ok 페르소나 1447명 가운데 이 부모로 education 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,unseen_ok|occupation|full:age_band+sex+education,1021,,3.4033333333333333,67.34828496042216,70.5597788527989,"unseen_ok 페르소나 1447명 가운데 이 부모로 occupation 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,unseen_ok|occupation|backoff:age_band+sex|dropped:education,426,,1.42,28.100263852242744,29.440221147201107,"unseen_ok 페르소나 1447명 가운데 이 부모로 occupation 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,unseen_ok|household_income_band|backoff:age_band|dropped:occupation,767,,2.5566666666666666,50.593667546174146,53.0062197650311,"unseen_ok 페르소나 1447명 가운데 이 부모로 household_income_band 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff,unseen_ok|household_income_band|full:age_band+occupation,680,,2.2666666666666666,44.854881266490764,46.9937802349689,"unseen_ok 페르소나 1447명 가운데 이 부모로 household_income_band 을 뽑은 비율. 백오프는 성별이 부모라 4원 조합만으로는 정해지지 않는다. full 은 부모 칸 비가중 n≥cell_floor 인 조건부이고, 그 학력·직업 범주 자체의 인원이 30명 이상이라는 뜻은 아니다."
+backoff_rule,a|education|full:age_band+sex,34,,0.11333333333333333,2.242744063324538,100.0,규칙 a 의 미관측 페르소나가 education 를 뽑을 때 쓴 부모.
+backoff_rule,a_graduate|education|full:age_band+sex,15,,0.05,0.9894459102902374,100.0,규칙 a_graduate 의 미관측 페르소나가 education 를 뽑을 때 쓴 부모.
+backoff_rule,a_college|education|full:age_band+sex,19,,0.06333333333333334,1.2532981530343008,100.0,규칙 a_college 의 미관측 페르소나가 education 를 뽑을 때 쓴 부모.
+backoff_rule,b|occupation|backoff:age_band+sex|dropped:education,29,,0.09666666666666666,1.912928759894459,59.183673469387756,규칙 b 의 미관측 페르소나가 occupation 를 뽑을 때 쓴 부모.
+backoff_rule,b|occupation|full:age_band+sex+education,20,,0.06666666666666667,1.3192612137203166,40.816326530612244,규칙 b 의 미관측 페르소나가 occupation 를 뽑을 때 쓴 부모.
+backoff_rule,b_white|occupation|full:age_band+sex+education,8,,0.02666666666666667,0.5277044854881267,57.142857142857146,규칙 b_white 의 미관측 페르소나가 occupation 를 뽑을 때 쓴 부모.
+backoff_rule,b_white|occupation|backoff:age_band+sex|dropped:education,6,,0.02,0.39577836411609496,42.857142857142854,규칙 b_white 의 미관측 페르소나가 occupation 를 뽑을 때 쓴 부모.
+backoff_rule,d|occupation|none,0,,0.0,0.0,,해당 위반 페르소나가 없다.
+in_support,any,163,15,0.5433333333333333,,0.5722510883302907,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,a,140,6,0.4666666666666667,,0.49150400224687546,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,a_college,140,6,0.4666666666666667,,0.49150400224687546,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,a_graduate,0,0,0.0,,0.0,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,b,24,10,0.08,,0.08425782895660722,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,b_white,3,2,0.01,,0.010532228619575902,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.
+in_support,d,0,0,0.0,,0.0,응답자에 있는 4원 조합을 가진 페르소나. pct_of_rule 은 그 집단 대비. 위반 분자가 아니다.

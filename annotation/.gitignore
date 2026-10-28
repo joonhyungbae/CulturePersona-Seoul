@@ -1,0 +1,10 @@
+node_modules
+dist
+*.timestamp-*.mjs
+__pycache__
+# Item keys and unsealed originals are never committed, so that reading the repository does not reveal anchors.
+# Code.gs embeds the keys; it is built locally (npm run build:data) and pasted into Apps Script.
+data_private
+apps_script/Code.gs
+.dev_store/
+.dev_cert/

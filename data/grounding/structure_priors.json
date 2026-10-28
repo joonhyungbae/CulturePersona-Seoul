@@ -1,0 +1,104 @@
+{
+  "built_at": "2026-09-10T05:38:50.063924+00:00",
+  "adr": "ADR-007",
+  "source_waves": [
+    2020,
+    2022
+  ],
+  "genre_tree": [
+    {
+      "genre": "attend_movie",
+      "parent": null
+    },
+    {
+      "genre": "attend_theater",
+      "parent": "attend_movie"
+    },
+    {
+      "genre": "attend_western_classical",
+      "parent": "attend_theater"
+    },
+    {
+      "genre": "attend_dance_performance",
+      "parent": "attend_western_classical"
+    },
+    {
+      "genre": "attend_exhibition",
+      "parent": "attend_western_classical"
+    },
+    {
+      "genre": "attend_traditional",
+      "parent": "attend_dance_performance"
+    },
+    {
+      "genre": "attend_popular_performance",
+      "parent": "attend_dance_performance"
+    },
+    {
+      "genre": "attend_museum",
+      "parent": "attend_exhibition"
+    },
+    {
+      "genre": "attend_literature_event",
+      "parent": "attend_traditional"
+    },
+    {
+      "genre": "attend_outdoor_event",
+      "parent": "attend_popular_performance"
+    }
+  ],
+  "genre_rank_among_goers": [
+    {
+      "genre": "attend_movie",
+      "attend_rate_among_goers": 0.7666768079342333,
+      "rank": 1
+    },
+    {
+      "genre": "attend_outdoor_event",
+      "attend_rate_among_goers": 0.37321910225793076,
+      "rank": 2
+    },
+    {
+      "genre": "attend_exhibition",
+      "attend_rate_among_goers": 0.3568428178323075,
+      "rank": 3
+    },
+    {
+      "genre": "attend_museum",
+      "attend_rate_among_goers": 0.34436672307755434,
+      "rank": 4
+    },
+    {
+      "genre": "attend_theater",
+      "attend_rate_among_goers": 0.20843065697488813,
+      "rank": 5
+    },
+    {
+      "genre": "attend_popular_performance",
+      "attend_rate_among_goers": 0.20657508410389708,
+      "rank": 6
+    },
+    {
+      "genre": "attend_western_classical",
+      "attend_rate_among_goers": 0.1394005761841751,
+      "rank": 7
+    },
+    {
+      "genre": "attend_literature_event",
+      "attend_rate_among_goers": 0.10021726804580733,
+      "rank": 8
+    },
+    {
+      "genre": "attend_traditional",
+      "attend_rate_among_goers": 0.08538454087353729,
+      "rank": 9
+    },
+    {
+      "genre": "attend_dance_performance",
+      "attend_rate_among_goers": 0.06061859036082298,
+      "rank": 10
+    }
+  ],
+  "chain": "era_core_chain",
+  "note": "수준(주변)은 이전하지 않는다. 장르 트리·순위만."
+}

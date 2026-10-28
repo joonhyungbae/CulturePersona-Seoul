@@ -1,0 +1,124 @@
+{
+  "weighted_waves": [
+    2020,
+    2022,
+    2024
+  ],
+  "intersection_canonical_holdouts": [
+    "leisure_activity_1st",
+    "leisure_activity_wanted_1st",
+    "leisure_time_weekday",
+    "leisure_time_weekend"
+  ],
+  "intersection_domain_n": 30,
+  "intersection_domain_primary": [
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_leisure_well_used"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_mood_improved"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_overall_happiness"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_stress_relieved"
+    },
+    {
+      "family": "attitude",
+      "measure": "other",
+      "item": "arts_importance"
+    },
+    {
+      "family": "intention_past",
+      "measure": "intention",
+      "item": "movie"
+    },
+    {
+      "family": "intention_past",
+      "measure": "intention",
+      "item": "exhibition"
+    },
+    {
+      "family": "intention_past",
+      "measure": "intention",
+      "item": "museum"
+    },
+    {
+      "family": "satisfaction",
+      "measure": "satisfaction",
+      "item": "attendance_overall"
+    },
+    {
+      "family": "satisfaction",
+      "measure": "satisfaction",
+      "item": "cultural_life_overall"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_meaning_of_life"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_relationships"
+    },
+    {
+      "family": "attitude",
+      "measure": "frequency",
+      "item": "effect_self_esteem"
+    },
+    {
+      "family": "intention_past",
+      "measure": "intention",
+      "item": "dance_performance"
+    },
+    {
+      "family": "intention_past",
+      "measure": "intention",
+      "item": "literature_event"
+    }
+  ],
+  "r5_only_domain_items_sample": [
+    "ai_artwork_participation_intent",
+    "arts_contribute_community_happiness",
+    "attitude_youth_education_support",
+    "digital_arts_event",
+    "act_field_none",
+    "act_field_theater_musical",
+    "act_place_school__학교_학교_동호회_포함",
+    "digital_none_of_these",
+    "digital_video_film_drama",
+    "env_life_sphere",
+    "env_outside_life_sphere",
+    "genai_artwork",
+    "intent_participate_for_social_connection",
+    "isolation_can_rely_on_others",
+    "isolation_feel_excluded",
+    "isolation_feel_lonely",
+    "isolation_has_helper",
+    "lib_info_contact_none",
+    "lib_info_participation_none",
+    "no_participation",
+    "other_participation",
+    "participate_if_more_time",
+    "seoul_global_culture_city_status",
+    "seoul_global_status_priority",
+    "theater_acting"
+  ],
+  "metrics_policy": {
+    "binary_ok": true,
+    "require_width_depth_spend": true,
+    "forbid_gap_narrative": true,
+    "mode_scale_note": "이분 격차 서사 금지; 폭·깊이·지출은 분포 재현 지표로만"
+  }
+}

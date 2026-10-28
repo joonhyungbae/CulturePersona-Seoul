@@ -1,0 +1,88 @@
+{
+  "built_at": "2026-10-08T06:36:22.053255+00:00",
+  "adr": "ADR-007",
+  "wave": 2020,
+  "survey_era": "R3",
+  "weighting": "survey",
+  "n_respondents": 5095,
+  "weight_sum": 4803.468237237001,
+  "cell_floor": 30,
+  "geo_max_level": "living_area",
+  "anchors": [
+    "sex",
+    "age_band",
+    "living_area",
+    "education",
+    "occupation",
+    "household_income_band",
+    "seoul_years_band",
+    "household_size_band",
+    "leisure_sufficiency",
+    "leisure_companion",
+    "attend_exhibition",
+    "attend_museum",
+    "attend_western_classical",
+    "attend_popular_performance",
+    "attend_dance_performance",
+    "attend_traditional",
+    "attend_theater",
+    "attend_literature_event",
+    "attend_movie",
+    "attend_outdoor_event",
+    "attend_any",
+    "attend_count_band",
+    "paid_spend_band",
+    "viewing_companion"
+  ],
+  "official_sources": [
+    {
+      "file": "official_person_canonical.parquet",
+      "sha256": "467f4a5e1311347b68660dca58e18a2d0d5b17356674e2468fbc901d7debc59c"
+    },
+    {
+      "file": "official_person_domain.parquet",
+      "sha256": "776cc2d51eca1001c42ba4e996327532eba480ce2f4cb46f57e152ed6e16876e"
+    },
+    {
+      "file": "official_person_domain_imputed.parquet",
+      "sha256": "d4df58be913746c514d3bc11ca5c791a708dd4aea3a8b4ffc4062c2360ef138f"
+    },
+    {
+      "file": "official_person_item.parquet",
+      "sha256": "c383110cc1ec1af3038dac47f9bdf6cd1061501ff3bef7663a1d14cfc9afca1a"
+    },
+    {
+      "file": "official_person_item_imputed.parquet",
+      "sha256": "39efb7868c43811e04c9b7f07237d529a525f34f0688e8814896a41506abc443"
+    },
+    {
+      "file": "official_person_keys.parquet",
+      "sha256": "894494d8ba43e6b02698fc45ab92f38577e2fd0c7bcf7b52766bca22b1f52b1e"
+    },
+    {
+      "file": "official_person_master.parquet",
+      "sha256": "2eb8117531237fb74ca383713afda95196e86ca8ab5ce27940261f231e73b9b7"
+    },
+    {
+      "file": "official_person_text.parquet",
+      "sha256": "0adaf771d0e39ba7e6d4cea92177f46e763e29da498b6233c5e54228f63985fd"
+    },
+    {
+      "file": "official_person_wavelocal.parquet",
+      "sha256": "ec0cd214523f6b53bc7975111bd7ee3fb47b85b6e0739c861787039a490a910a"
+    }
+  ],
+  "population_root": {
+    "path": "R0_population_root.parquet",
+    "reference_month": "2020-12",
+    "population_total": 8673068,
+    "wave_matched": true,
+    "note": "Resident-registration population of the wave's December (ADR-011)."
+  },
+  "policy": "개별 응답 기록은 리샘플하지 않는다. 시대 간 관람률 수준을 맞추지 않는다. 공개본은 비가중 셀 < cell_floor 제외. 지역은 생활권까지.",
+  "gate_summary": {
+    "n": 11,
+    "n_fail": 0,
+    "max_abs_diff": 1.379
+  }
+}

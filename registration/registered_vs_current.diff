@@ -1,0 +1,141 @@
+--- registered
++++ current
+@@ -8,2 +8,3 @@
+ import pandas as pd
++from pydantic import BaseModel, computed_field
+ from scipy.stats import beta, binom
+@@ -39,6 +40,13 @@
+     return out
+-
+-def load(store: Path, key_path: Path) -> tuple[pd.DataFrame, dict[str, dict], pd.DataFrame | None, pd.DataFrame | None]:
++SUBSET_DEFAULT = settings.outputs_dir / 'anno' / 'subset_v2.json'
++
++def load(store: Path, key_path: Path, subset_path: Path | None=SUBSET_DEFAULT) -> tuple[pd.DataFrame, dict[str, dict], pd.DataFrame | None, pd.DataFrame | None]:
+     key = pd.read_csv(key_path, dtype=str).fillna('')
+     key = key[key.stratum != 'practice'].copy()
++    if subset_path is not None and subset_path.exists():
++        ids = set(json.loads(subset_path.read_text(encoding='utf-8'))['ids'])
++        dropped = key[~key.item_id.isin(ids)]
++        outside = {r: sum((1 for iid in latest(read_jsonl(store / 'annotations' / f'{r}.jsonl')) if iid in set(dropped.item_id))) for r in ('R1', 'R2')}
++        log.info('sample reduction: registered %d → analysis %d items (%s); dropping %s scores outside the subset unread', len(key), len(key) - len(dropped), key[key.item_id.isin(ids)].groupby('stratum').size().to_dict(), outside)
++        key = key[key.item_id.isin(ids)].copy()
+     wide = key.set_index('item_id')
+@@ -63,3 +71,3 @@
+     bank_rows = read_jsonl(store / 'llm_bank.jsonl')
+-    bank = pd.DataFrame(bank_rows) if bank_rows else None
++    bank = pd.DataFrame(bank_rows).drop_duplicates('item_id', keep='last') if bank_rows else None
+     return (wide.reset_index(), adj, llm, bank)
+@@ -77,3 +85,3 @@
+     if unresolved.any():
+-        log.warning('판정되지 않은 모순 불일치 %d 문항 — 모순으로 센다', int(unresolved.sum()))
++        log.warning('unadjudicated contradiction disagreements: %d items — counted as contradictions', int(unresolved.sum()))
+         df.loc[unresolved, 'cons_contra'] = 1
+@@ -138,5 +146,57 @@
+ 
+-def analyse(df: pd.DataFrame, adj: dict[str, dict], llm: pd.DataFrame | None, bank: pd.DataFrame | None, orders: dict[str, list[str]]) -> list[dict]:
++class WaveBankCount(BaseModel):
++    wave: int
++    done: int
++    target: int
++
++class BankCoverage(BaseModel):
++    waves: list[WaveBankCount]
++    n_outside: int
++
++    @computed_field
++    @property
++    def n_done(self) -> int:
++        return sum((w.done for w in self.waves))
++
++    @computed_field
++    @property
++    def n_target(self) -> int:
++        return sum((w.target for w in self.waves))
++
++    @computed_field
++    @property
++    def complete(self) -> bool:
++        return bool(self.waves) and all((w.done == w.target for w in self.waves))
++
++    @property
++    def pending_note(self) -> str:
++        return f'뱅크 채점 미완({self.n_done}/{self.n_target})'
++
++def clean_targets() -> dict[int, set[str]]:
++    from anno_build_sample import WAVES, is_clean, load_bank
++    targets: dict[int, set[str]] = {}
++    for wave in WAVES:
++        targets[int(wave)] = {str(r['quant_id']) for r in load_bank(wave) if is_clean(r)}
++    return targets
++
++def bank_coverage(bank: pd.DataFrame, targets: dict[int, set[str]]) -> BankCoverage:
++    scored = set(bank['item_id'].astype(str))
++    waves = [WaveBankCount(wave=wave, done=len(scored & ids), target=len(ids)) for wave, ids in targets.items()]
++    universe = set().union(*targets.values()) if targets else set()
++    coverage = BankCoverage(waves=waves, n_outside=len(scored - universe))
++    for w in coverage.waves:
++        log.info('bank %d: done %d/%d', w.wave, w.done, w.target)
++    log.info('item_ids outside the bank target: %d', coverage.n_outside)
++    if not coverage.complete:
++        log.warning(coverage.pending_note)
++    return coverage
++
++def ppi_pending_row(coverage: BankCoverage) -> dict:
++    return {'id': 'D-ppi', 'kind': 'descriptive', 'claim': '뱅크 전수 모순률 (PPI: LLM 전수 + 사람 보정)', 'estimate': None, 'hi': None, 'n': None, 'note': coverage.pending_note}
++
++def analyse(df: pd.DataFrame, adj: dict[str, dict], llm: pd.DataFrame | None, bank: pd.DataFrame | None, orders: dict[str, list[str]], *, allow_partial_bank: bool=False, coverage: BankCoverage | None=None) -> list[dict]:
+     rng = np.random.default_rng(SEED)
+     rows: list[dict] = []
++    if bank is not None and coverage is None:
++        coverage = bank_coverage(bank, clean_targets())
+     df = consensus(df, adj)
+@@ -183,3 +243,3 @@
+         secondary[pid] = p_lower(k, n, S1_NULL) if n else 1.0
+-        rows.append({'id': pid, 'kind': 'secondary', 'claim': f'{r} 함정 민감도 > 0.5 (국소 편집 48)', 'estimate': k / n if n else float('nan'), 'lo': cp_lower(k, n) if n else float('nan'), 'n': n, 'p': secondary[pid]})
++        rows.append({'id': pid, 'kind': 'secondary', 'claim': f'{r} 함정 민감도 > 0.5 (국소 편집 {len(trap)})', 'estimate': k / n if n else float('nan'), 'lo': cp_lower(k, n) if n else float('nan'), 'n': n, 'p': secondary[pid]})
+         for t, g in trap.groupby('tier'):
+@@ -231,9 +291,12 @@
+         if bank is not None and 'contradiction' in bank.columns:
+-            lb = (bank.contradiction == 'yes').astype(float).to_numpy()
+-            cc = clean.dropna(subset=['cons_contra'])
+-            cc = cc[cc.item_id.isin(lj.index)]
+-            rect = cc.cons_contra.to_numpy(float) - lj.loc[cc.item_id].to_numpy(float)
+-            theta = lb.mean() + rect.mean()
+-            se = float(np.sqrt(lb.var(ddof=1) / len(lb) + rect.var(ddof=1) / len(rect)))
+-            rows.append({'id': 'D-ppi', 'kind': 'descriptive', 'claim': '뱅크 전수 모순률 (PPI: LLM 전수 + 사람 보정)', 'estimate': theta, 'hi': theta + 1.645 * se, 'n': len(lb), 'note': f'보정 표본 {len(rect)} · LLM 원 추정 {lb.mean():.4f}'})
++            if coverage is not None and (not coverage.complete) and (not allow_partial_bank):
++                rows.append(ppi_pending_row(coverage))
++            else:
++                lb = (bank.contradiction == 'yes').astype(float).to_numpy()
++                cc = clean.dropna(subset=['cons_contra'])
++                cc = cc[cc.item_id.isin(lj.index)]
++                rect = cc.cons_contra.to_numpy(float) - lj.loc[cc.item_id].to_numpy(float)
++                theta = lb.mean() + rect.mean()
++                se = float(np.sqrt(lb.var(ddof=1) / len(lb) + rect.var(ddof=1) / len(rect)))
++                rows.append({'id': 'D-ppi', 'kind': 'descriptive', 'claim': '뱅크 전수 모순률 (PPI: LLM 전수 + 사람 보정)', 'estimate': theta, 'hi': theta + 1.645 * se, 'n': len(lb), 'note': f'보정 표본 {len(rect)} · LLM 원 추정 {lb.mean():.4f}'})
+     else:
+@@ -289,6 +352,9 @@
+     ap.add_argument('--out', type=Path, default=settings.outputs_dir / 'reports')
++    ap.add_argument('--allow-partial-bank', action='store_true', help='compute PPI even if bank scoring is incomplete (progress check; blocked by default)')
++    ap.add_argument('--subset', type=Path, default=SUBSET_DEFAULT, help='shared-subset file (ADR-039). If the file is missing, analyse the full registered sample')
+     args = ap.parse_args()
+-    df, adj, llm, bank = load(args.store, args.key)
++    df, adj, llm, bank = load(args.store, args.key, args.subset)
+     missing = {r: int(df[f'{r}_contra'].isna().sum()) for r in ('R1', 'R2')}
+-    log.info('문항 %d (연습 제외) · 끝내지 못한 문항 %s', len(df), missing)
++    log.info('items %d (practice excluded) · unfinished items %s', len(df), missing)
++    coverage = bank_coverage(bank, clean_targets()) if bank is not None else None
+     orders = {}
+@@ -298,3 +364,3 @@
+             orders[r] = json.loads(p.read_text(encoding='utf-8'))
+-    rows = analyse(df, adj, llm, bank, orders)
++    rows = analyse(df, adj, llm, bank, orders, allow_partial_bank=args.allow_partial_bank, coverage=coverage)
+     res = pd.DataFrame(rows)
+@@ -306,3 +372,6 @@
+             show[c] = show[c].map(lambda v: '' if pd.isna(v) else f'{v:.4f}')
+-    lines = ['# 인간 검수 결과 (사전등록 v2 분석)', '', f'사전등록: docs/annotation_prereg.md §6 · 끝내지 못한 문항 {missing}', '', show.fillna('').to_markdown(index=False), '', '주 주장(P1, P2)은 둘 다 성립해야 「검수 통과」다 (각각 단측 α=0.05). 부 주장 8 개는 Holm 보정 p 로 판정한다.']
++    lines = ['# 인간 검수 결과 (사전등록 v2 분석)', '', f'사전등록: docs/annotation_prereg.md §6 · 끝내지 못한 문항 {missing}', '']
++    if coverage is not None and (not coverage.complete) and (not args.allow_partial_bank):
++        lines.extend([coverage.pending_note, ''])
++    lines.extend([show.fillna('').to_markdown(index=False), '', '주 주장(P1, P2)은 둘 다 성립해야 「검수 통과」다 (각각 단측 α=0.05). 부 주장 8 개는 Holm 보정 p 로 판정한다.'])
+     (args.out / 'anno_results.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
